@@ -10,5 +10,5 @@ local scriptURL = games[currentID]
 if scriptURL then
     loadstring(game:HttpGet(scriptURL))()
 else
-    game.Players.LocalPlayer:Kick("Gendengggg!! Harusnya lu masuk Fish It Bejir. ini script fish it.")
+    game.Players.LocalPlayer:Kick("Meng Hub Loader does not support that map yet!.")
 end
