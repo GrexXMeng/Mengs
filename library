@@ -1,7 +1,20 @@
 local games = {
     [121864768012064] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua",
     [127794225497302] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Abyss.lua",
-    [16732694052] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",
+    
+    -- FISCH - Main Places
+    [16732694052] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Main (SCORIA REACH)
+    [131716211654599] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua", -- Fisch [🆕 NEW]
+    
+    -- FISCH - Other Maps
+    [178001500007] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",    -- Update Place
+    [70450560311302] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- Deep Sea 2
+    [72907489978215] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- The Second Sea
+    [85537329004957] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- A Journey Back In Time
+    [99519129453387] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- Trade Plaza
+    [105044186406168] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Main Game Staging
+    [106011698424775] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Fisch [Deep Sea]
+    [112780263016678] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- AFK Mine
 }
 
 local currentID = game.PlaceId
@@ -10,5 +23,5 @@ local scriptURL = games[currentID]
 if scriptURL then
     loadstring(game:HttpGet(scriptURL))()
 else
-    game.Players.LocalPlayer:Kick("Meng Hub Loader does not support that map yet!.")
+    game.Players.LocalPlayer:Kick("Meng Hub Loader does not support that map yet!.\nPlaceId: " .. currentID)
 end
