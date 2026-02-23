@@ -1,28 +1,32 @@
 local games = {
+    -- [ UNIVERSE ID ] - Lebih stabil untuk game dengan banyak sub-map
+    [9363735110] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua", -- Tsunami Brainrot Universe
+    [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",         -- Fisch Universe (Main)
+
+    -- [ PLACE ID ] - Tetap simpan ini sebagai backup atau untuk game spesifik
     [121864768012064] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua",
     [127794225497302] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Abyss.lua",
-    [131623223084840] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua",
     
-    -- FISCH - Main Places
-    [16732694052] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Main (SCORIA REACH)
-    [131716211654599] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua", -- Fisch [🆕 NEW]
-    
-    -- FISCH - Other Maps
-    [178001500007] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",    -- Update Place
-    [70450560311302] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- Deep Sea 2
-    [72907489978215] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- The Second Sea
-    [85537329004957] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- A Journey Back In Time
-    [99519129453387] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",   -- Trade Plaza
-    [105044186406168] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Main Game Staging
-    [106011698424775] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- Fisch [Deep Sea]
-    [112780263016678] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",  -- AFK Mine
+    -- Fisch Specific Places (Backup jika Universe ID tidak terdeteksi)
+    [16732694052] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",
+    [131716211654599] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",
+    -- Tambahkan ID 14 digit dari screenshot lu buat jaga-jaga
+    [86362492050446] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua",
 }
 
-local currentID = game.PlaceId
-local scriptURL = games[currentID]
+local currentPlaceID = game.PlaceId
+local currentUniverseID = game.GameId
+
+-- Cek di Universe ID dulu, kalau gak ada baru cek Place ID
+local scriptURL = games[currentUniverseID] or games[currentPlaceID]
 
 if scriptURL then
+    print("Meng Hub: Loading script for ID " .. (games[currentUniverseID] and "Universe" or "Place"))
     loadstring(game:HttpGet(scriptURL))()
 else
-    game.Players.LocalPlayer:Kick("Meng Hub Loader does not support that map yet!.\nPlaceId: " .. currentID)
+    -- Pesan Kick yang informatif biar lu gampang debug kedepannya
+    local msg = "\nMap not supported yet!\nPlaceId: " .. tostring(currentPlaceID) .. "\nUniverseId: " .. tostring(currentUniverseID)
+    game.Players.LocalPlayer:Kick(msg)
+    -- Print juga ke console (F9) biar bisa di-copy
+    print(msg)
 end
