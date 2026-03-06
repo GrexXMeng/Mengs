@@ -9,6 +9,7 @@ local games = {
     [131716211654599] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",
 
     [86362492050446] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua",
+    [83369512629707] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SawahIndo.lua",
 }
 
 local currentPlaceID = game.PlaceId
