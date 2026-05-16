@@ -1,7 +1,8 @@
 local games = {
     [9363735110] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua", -- Tsunami Brainrot Universe
-    [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",         -- Fisch Universe (Main)
+    [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",         -- Fisch Universe Universe
     [9186719164] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
+    [6739698191] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",         -- Violence District Universe
 
     [121864768012064] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua",
     [79378095465365] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua", -- Plaza
@@ -13,6 +14,7 @@ local games = {
     [86362492050446] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua",
     [83369512629707] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SawahIndo.lua",
     [77747658251236] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
+    [93978595733734] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",
 }
 
 local currentPlaceID = game.PlaceId
