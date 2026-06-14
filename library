@@ -3,6 +3,7 @@ local games = {
     [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",         -- Fisch Universe Universe
     [9186719164] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
     [6739698191] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",         -- Violence District Universe
+    [10200395747] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/GAG2.lua",
 
     [121864768012064] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua",
     [79378095465365] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua", -- Plaza
