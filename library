@@ -22,11 +22,10 @@ local velocityOverrides = {
     [93978595733734] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Velocitot.lua",
 }
 
+local executorName = (identifyexecutor and identifyexecutor() or "Unknown")
 local currentPlaceID = game.PlaceId
 local currentUniverseID = game.GameId
-
-local isVelocity = (identifyexecutor and identifyexecutor():lower():find("velocity"))
-                or (getexecutorname and getexecutorname():lower():find("velocity"))
+local isVelocity = executorName:find("Velocity")
 
 local scriptURL
 if isVelocity then
