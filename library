@@ -2,7 +2,10 @@ local games = {
     [9363735110] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua", -- Tsunami Brainrot Universe
     [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",         -- Fisch Universe Universe
     [9186719164] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
-    [6739698191] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",         -- Violence District Universe
+    [6739698191] = {
+        default = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",         -- Violence District Universe
+        velocity = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Velocitot.lua",
+    },
     [10200395747] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/GAG2.lua",
 
     [121864768012064] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/FishIt.lua",
@@ -22,10 +25,13 @@ local games = {
 local currentPlaceID = game.PlaceId
 local currentUniverseID = game.GameId
 
-local scriptURL = games[currentUniverseID] or games[currentPlaceID]
+local gameEntry = games[currentUniverseID] or games[currentPlaceID]
 
-if scriptURL then
-    print("Meng Hub: Loading script for ID " .. (games[currentUniverseID] and "Universe" or "Place"))
+if gameEntry then
+    local isVelocity = (identifyexecutor and identifyexecutor():lower():find("velocity")) 
+                    or (getexecutorname and getexecutorname():lower():find("velocity"))
+
+    local scriptURL = (isVelocity and gameEntry.velocity) or gameEntry.default
     loadstring(game:HttpGet(scriptURL))()
 else
     local msg = "\nMap not supported yet!\nPlaceId: " .. tostring(currentPlaceID) .. "\nUniverseId: " .. tostring(currentUniverseID)
