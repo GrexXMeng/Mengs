@@ -15,24 +15,10 @@ local games = {
     [97598239454123] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/GAG2.lua",
 }
 
--- Game yang punya versi Velocity khusus
-local velocityOverrides = {
-    [6739698191] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Velocitot.lua",
-    [93978595733734] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Velocitot.lua",
-}
 
-local executorName = (identifyexecutor and identifyexecutor() or "Unknown")
 local currentPlaceID = game.PlaceId
 local currentUniverseID = game.GameId
-local isVelocity = executorName:find("Velocity")
-
-local scriptURL
-if isVelocity then
-    scriptURL = velocityOverrides[currentUniverseID] or velocityOverrides[currentPlaceID]
-              or games[currentUniverseID] or games[currentPlaceID]
-else
-    scriptURL = games[currentUniverseID] or games[currentPlaceID]
-end
+local scriptURL = games[currentUniverseID] or games[currentPlaceID]
 
 if scriptURL then
     print("Meng Hub: Loading script for ID " .. (games[currentUniverseID] and "Universe" or "Place"))
