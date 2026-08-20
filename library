@@ -1,4 +1,5 @@
 local games = {
+    [10563114921] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/StealAnEgg.lua",
     [9363735110] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/TsunamiBrainrot.lua",
     [6051475510] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/Fisch.lua",
     [9186719164] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
@@ -15,7 +16,6 @@ local games = {
     [97598239454123] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/GAG2.lua",
     [107778070777162] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/StealAnEgg.lua",
 }
-
 
 local currentPlaceID = game.PlaceId
 local currentUniverseID = game.GameId
