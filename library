@@ -13,6 +13,7 @@ local games = {
     [77747658251236] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/SailorPiece.lua",
     [93978595733734] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/ViolenceDistrict.lua",
     [97598239454123] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/GAG2.lua",
+    [107778070777162] = "https://raw.githubusercontent.com/GrexXMeng/Mengs/refs/heads/main/StealAnEgg.lua",
 }
 
 
